@@ -7,7 +7,7 @@ using namespace std;
 
 class Admin {
 public:
-    int opt;
+    int opt,opt2;
 
     void option();
 };
