@@ -1,7 +1,9 @@
 #include "Admin.h"
 #include "Student.h"
+#include "Teacher.h"
 
 Student s1;
+Teacher t1;
 void Admin::option() {
 	adhome:
     cout << "Select Option : " << endl;
@@ -33,16 +35,23 @@ void Admin::option() {
     		cout<<"Choose Option: "<<endl;
     		cout<<"1. Register a Student "<<endl;
     		cout<<"2. Register a Teacher "<<endl;
+    		cout<<"0. For Back "<<endl;
     		cin>>opt2;
     		if(opt2==1){
     			cout<<"Student "<<endl;
     			s1.getData();
-    			
+    			s1.showSimpleData();
     			
 			}
 			else if (opt2==2){
 				cout<<"Teacher"<<endl;
-				
+				t1.getData();
+				t1.showSimpleData();
+		
+			}
+			else if (opt2==0){
+				cout<<"Back"<<endl;
+				goto adhome;
 			}
 			else {
 				cout<<"Enter a valid option "<<endl;
